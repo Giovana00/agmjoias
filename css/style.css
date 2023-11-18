@@ -1,0 +1,413 @@
+/* Arquivo da folha de estilos de todo o site */
+/* Início CSS estilo header */
+body, ul{
+    margin: 0;
+    padding: 0px;
+}
+#menu a{
+    color: #8B4513;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+#menu a:hover{
+    background: #FFE6C0;
+    font-size: 15px;
+}
+#logo {
+    font-size: 1.5rem;
+}
+#logo img{
+    height: 70px;
+}
+#logo img:hover{
+    box-shadow: 4px 4px 8px #cbcbcb;
+    transition: 0.3s;
+}
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e7e7e7;
+    box-shadow: 3px 3px 6px #b1b1b1;
+    /* sombra menu */
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+#btn-mobile {
+    display: none;
+}
+/* Fim CSS estilo header */
+/* Inicio estilo carousel */
+#carouselExampleInterval{
+    position: relative;
+    z-index: 10;
+    padding-top: 10px;
+    box-shadow: 3px 3px 6px #b1b1b1;
+}
+/* Fim estilo carousel */ 
+
+/* Inicio estilo midia >> mobile */
+@media (max-width: 600px) {
+    #menu {
+        display: block;
+        position: absolute;
+        width: 15em;
+        top: 70px;
+        right: 0px;
+        background-color: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        padding-left: 5px;
+        visibility: hidden;
+        overflow: hidden;
+    }
+    #menu li {
+        padding-top: 30px;
+        padding-bottom: 0px;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgb(105, 130, 182);
+    }
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: hidden;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+    #hamburger{
+        border-top: 2px solid;
+        /* Para aumentar ou diminuir a espessura da linha do hamburger */
+        width: 30px;
+        /* Para alterar a largura do hamburger */
+        color: #000;
+        /* Para alterar a cor do hamburger */
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 30px;
+        /* Altera a largura do hamburger, juntamente com o width anterior */
+        height: 2px;
+        background: currentColor;
+        margin-top: 4px;
+        /* Altera o espaçamento das linhas do hamburger */
+        position: relative;
+        border-top: 2px solid;
+        /* Para aumentar ou diminuir a espessura linha do hamburger, juntamente com o border-top anterior */
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+/* Fim estilo midia >> mobile */
+
+/* Inicio estilo Banner Home */
+/* Para aplicar estilos na CLASS > utilize o ponto [.] antes do objeto */
+/* Para aplicar estilos no ID > utilize a hashtag [#] antes do objeto */
+.section-banner-home {
+    width: 100%;
+    height: 500px;
+    margin-top: 5px;
+    padding: 50px;
+    background-color: #062d50e0;
+    color: white;
+    text-decoration: none;
+    box-shadow: 3px 3px 6px #b1b1b1;
+}
+.section-banner-home img {
+    max-width: 300px;
+    width: 70%;
+    display: block;
+    margin: auto;
+    box-shadow: 7px 7px 3px #858585;
+}
+.section-banner-home .texto-banner {
+    font-size: 30px;
+    width: 80%;  /* width = Largura */
+    font-weight: 500; /* Espessura do texto */
+    padding-bottom: 20px; /* Margem interna > Embaixo */
+    margin-top: 30px;
+    font-size: 22px;
+}
+.section-banner-home .texto-banner h1 {
+    padding-bottom: 20px;
+    color: white;
+}
+.section-banner-home .texto-banner p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: justify;
+}
+.section-banner-home .texto-banner a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #062e50ea;
+    padding: 4px 14px;
+    font-size: 15px;
+    transition: 0.3; /* Deixando o efeito suave */
+}
+.section-banner-home .texto-banner a:houver {
+    /* color: greenyellow; */
+    /* text-shadow: 2px 2px 4px #ffffff7a; Sombra de texto */
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Fim estilo Banner Home */
+
+/* Inicio estilo destaque*/
+.destaque h2 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+.destque p {
+    width: 77%;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px auto;
+}
+.destque figcaption {
+    font-size: 13px;
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+.destaque #saiba-mais {
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    background: #e7e7e7;
+    margin: 30px 0px;
+    width: 50%;   
+}
+.destaque .col-6 img:hover{
+    box-shadow: 4px 4px 8px #cbcbcb;
+    transition: 0.3s;
+}
+
+/* Fim estilo destaque*/
+
+/* Inicio estilo novidades */
+.novidades .text-body{
+    width: 80%;
+    margin: 70px;
+}
+.novidades h2 {
+    color: #000;
+    font-size: 26px;
+    width: 70px;
+}
+.novidades p {
+    color: rgba(0, 0, 0);
+}
+.novidades a {
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    background: #e7e7e7;
+    margin: 30px 0px;
+    width: 35%;   
+}
+
+/* Fim estilo novidades */
+/* Início WhatsApp */
+.whatsapp {
+    position: fixed;
+    top: 850px;
+    right: 20px;
+    z-index: 200;
+}
+.whatsapp img{
+    height: 40px;
+}
+/* Inicio efeito pulse */
+.whatsapp .pulse {
+    animation: pulse 0.7s infinite;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+@-webkit-keyframes pulse {
+    0%{
+        -webkit-transform: scale(1);
+        -webkit-filter: brightness(100%);
+    }
+    100%{
+        -webkit-transform: scale(1.1);
+        -webkit-filter: brightness(110%);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    100%{
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
+}
+/* Fim efeito pulse */
+/* Fim WhatsApp */
+/* Inicio estilo footer rp */
+.rodape {
+    padding: 50px 50px 0;
+}
+.rodape .container #logo-rodape img {
+    height: 50%;
+    width: 50%;
+    padding-left: 10px;
+    transition: transform .3s;
+    display: block;
+}
+.rodape .container #logo-rodape:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.rodape .info-contato p {
+    margin: 0;
+}
+.rodape .linkFooter {
+    text-decoration: none;
+    color:#000;
+    font-size: 13px;
+    margin-left: 0.7rem;
+}
+.rodape .linkFooter:hover {
+    font-weight: bold;
+}
+.rodape .redes-sociais {
+    display: inline-block;
+}
+.rodape .redes-sociais img {
+    width: 50px;
+    height: 50px;
+    padding-left: 0;
+    margin-left: 0.8rem; 
+    transition: transform .3s;
+    border-radius: 15px;
+}
+.rodape .redes-sociais img:hover{
+    z-index: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.446);
+}
+.rodape p.direitos {
+    text-align: center;
+    margin-top: 40px;
+}
+/* fim estilo footer rp */
+/* Início estilo Vídeos */
+.embed-container {
+    position: relative;
+    padding-bottom: 0;
+    height: auto;
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+  }
+  .embed-container p {
+    text-align: center;
+    font-size: 20px;
+  }
+  .embed-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .embed-container iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    border-radius: 1em;
+    box-shadow: gray 0.5em 0.5em 0.3em;
+    transition: transform .3s;
+    display: flex;
+  }
+  .embed-container iframe:hover {
+    flex: 1;
+    z-index: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.446);
+  }
+  .embed-container .col-lg-4 {
+    margin-top: 30px;
+  }
+  .embed-container .col-lg-6 {
+    margin-top: 30px;
+  }
+  /* Fim estilo Vídeos */
+/* Inicio estilo contato */
+.contact {
+    padding: 70px;
+    background: #ffffff;
+  }
+  .section-title h2 {
+    color: #8B4513;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    border-bottom: 5px solid #FFE6C0;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  .section p {
+    color: #e8e8e8;
+    margin-bottom: 30px;
+  }
+  .contact input,
+  .contact textarea {
+    background: #fafafa;
+  }
+  .contact textarea {
+    min-height: 188px;
+    max-width: 100%;
+  }
+  .contact .map {
+    overflow: hidden;
+    border-radius: 4px;
+    height: 70%;
+  }
+  /* Fim estilo contato */
